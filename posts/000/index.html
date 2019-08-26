@@ -2,7 +2,7 @@
 <html>
 
     <head>
-        <title> first blog? &middot; My icck Blog </title>
+        <title> Hugoブログ更新方法 &middot; My icck Blog </title>
 
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -71,12 +71,55 @@
 </header>
 
         <div class="container wrapper">
-            <h1><a href="https://icck.github.io/posts/000/">first blog?</a></h1>
+            <h1><a href="https://icck.github.io/posts/000/">Hugoブログ更新方法</a></h1>
             <span class="post-date">Aug 26, 2019 </span>
             <div class="post-content">
                 
 
-<h2 id="test-blog">test blog</h2>
+<h1 id="hugoの使い方を今後のブログ更新のために">Hugoの使い方を今後のブログ更新のために</h1>
+
+<p>Hugoでブログを書いていく上で、運用方法をメモしていこうと思います。
+インストール等は気が向いたときに</p>
+
+<h3 id="local環境を起動">Local環境を起動</h3>
+
+<pre><code>$ hugo server --theme=hugo-theme-nix --buildDrafts --watch
+</code></pre>
+
+<h3 id="記事の作成">記事の作成</h3>
+
+<pre><code>$ hugo new post/test.md
+</code></pre>
+
+<pre><code>---
+title: &quot;test&quot;
+date: 2019-08-26T01:14:23+09:00
+draft: true
+---
+</code></pre>
+
+<ul>
+<li>title:記事のタイトルに修正</li>
+<li>date:作成時刻のため、そのまま</li>
+<li>draft:trueが非公開。falseに変更し公開</li>
+</ul>
+
+<h3 id="sample">Sample</h3>
+
+<pre><code>---
+title: &quot;test&quot;
+date: 2019-08-26T01:14:23+09:00
+draft: false
+---
+
+## ここにマークダウンで本文を記載
+
+</code></pre>
+
+<h3 id="githubへpush">githubへpush</h3>
+
+<pre><code>./deploy.sh
+</code></pre>
 
             </div>
             
