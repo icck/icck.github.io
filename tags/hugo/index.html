@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="js">
+
 	<head>
-		<title> My icck Blog </title> 
+		<title> Hugo &middot; My icck Blog </title>
 
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -43,8 +44,8 @@ ga('create', 'UA-126514155-2', 'auto');
 
 
 
-
 	</head>
+
 	<body>
 		<header>
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
@@ -88,10 +89,32 @@ ga('create', 'UA-126514155-2', 'auto');
 </header>
 
 		<div class="container wrapper">
-			<h1>Uhm... WHAT?</h1>
-			<div class="post-content">
-				<p>Looks like you're lost. This page doesn't exist</p>
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<h1 id=>Hugo</h1>
+				</div>
 			</div>
+			<ul id="post-list">
+                	
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
+							<h4 class="post-link"><a href="https://icck.github.io/posts/000/">Hugoブログ更新方法</a></h4>
+							<h4 class="post-date">Aug 26, 2019</h4>
+						</div>
+						<div class="post-summary"><p> Hugoの使い方を今後のブログ更新のために Hugoでブログを書いていく上で、運用方法をメモしていこうと思います。 インストール等は気が向いたときに
+Local環境を起動 $ hugo server --theme=hugo-theme-nix --buildDrafts --watch  記事の作成 $ hugo new post/test.md  --- title: &quot;test&quot; date: 2019-08-26T01:14:23+09:00 draft: true ---   title:記事のタイトルに修正 date:作成時刻のため、そのまま draft:trueが非公開。falseに変更し公開  Sample --- title: &quot;test&quot; date: 2019-08-26T01:14:23+09:00 draft: false --- ## ここにマークダウンで本文を記載  githubへpush ./deploy.sh  </p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://icck.github.io/posts/000/">Read More</a>
+						</div>
+					</div>
+				</li>
+			
+			</ul>
+            
+
+
+
 			<div class="push"></div>
 		</div>
 		<footer class="footer text-center">
@@ -107,4 +130,3 @@ ga('create', 'UA-126514155-2', 'auto');
 
 	</body>
 </html>
-
