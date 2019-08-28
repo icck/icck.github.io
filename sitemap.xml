@@ -3,17 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://icck.github.io/tags/hugo/</loc>
-    <lastmod>2019-08-26T01:14:23+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://icck.github.io/posts/000/</loc>
     <lastmod>2019-08-26T01:14:23+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://icck.github.io/</loc>
+    <lastmod>2019-08-28T22:01:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://icck.github.io/pages/</loc>
+    <lastmod>2019-08-28T22:01:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://icck.github.io/search/</loc>
+    <lastmod>2019-08-28T22:01:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://icck.github.io/index.js</loc>
+    <lastmod>2019-08-28T21:50:35+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://icck.github.io/tags/hugo/</loc>
     <lastmod>2019-08-26T01:14:23+09:00</lastmod>
   </url>
   
