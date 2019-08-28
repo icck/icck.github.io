@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Hugoに全文検索機能を追加する &middot; My icck Blog </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.57.2" />
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://icck.github.io/css/nix.css">
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata%7COpen+Sans%7CConcert+One" rel="stylesheet">
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-126514155-2', 'auto');
+	  ga('send', 'pageview');
+
+</script>
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://icck.github.io>icck@developer ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://icck.github.io">/home/icck</a>
+				</li>
+				
+				
+				<li class="dropdown">
+                    
+            		<a href="/posts">~/posts</a>
+            		
+        		</li>
+        		
+				
+				<li class="dropdown">
+                    
+            		<a href="/tags">~/tags</a>
+            		
+        		</li>
+        		
+				
+				<li class="dropdown">
+                    
+            		<a href="/search">~/search</a>
+            		
+        		</li>
+        		
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://icck.github.io/posts/2019-08-28/">Hugoに全文検索機能を追加する</a></h1>
+            <span class="post-date">Aug 28, 2019 </span>
+            <div class="post-content">
+                
+
+<h1 id="完成したもの">完成したもの</h1>
+
+<p>まずは動いているものは以下になります。</p>
+
+<p>TODO URL</p>
+
+<h1 id="作業手順">作業手順</h1>
+
+<ul>
+<li>手順を順に記載していきます。以下の記事を参考にさせていただきました。</li>
+<li><a href="http://rs.luminousspice.com/hugo-site-search/">http://rs.luminousspice.com/hugo-site-search/</a></li>
+<li><a href="https://snap.textgh.org/post/full-text-search-in-hugo/">https://snap.textgh.org/post/full-text-search-in-hugo/</a></li>
+</ul>
+
+<h2 id="インデックスファイルのテンプレート">インデックスファイルのテンプレート</h2>
+
+<pre><code class="language-bash">$ mkdir ./layouts/js
+$ touch ./layouts/js/single.html
+</code></pre>
+
+<pre><code class="language-js">var data = [{{ range $index, $page := where .Site.Pages &quot;Section&quot; &quot;posts&quot;}}
+{{ if ne $index 0 }},{{ end }}{
+url: &quot;{{ $page.Permalink }}&quot;,
+title: &quot;{{ $page.Title }}&quot;,
+content: &quot;{{ .PlainWords }}&quot;
+}{{ end }}]
+</code></pre>
+
+<h2 id="インデックスファイルを生成する空の投稿">インデックスファイルを生成する空の投稿</h2>
+
+<pre><code>$ hugo new pages/indexjs.md
+</code></pre>
+
+<pre><code>---
+date: 2019-08-28T21:50:35+09:00
+type: &quot;js&quot;
+url: &quot;index.js&quot;
+---
+</code></pre>
+
+<h1 id="検索ページの作成">検索ページの作成</h1>
+
+<h2 id="検索ページテンプレートの作成">検索ページテンプレートの作成</h2>
+
+<pre><code>$ mkdir ./layouts/search/
+$ touch ./layouts/search/single.html
+</code></pre>
+
+<pre><code class="language-html">{{ partial &quot;head.html&quot; . }}
+&lt;div class=&quot;container&quot;&gt;
+&lt;h1&gt;サイト内全文検索&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;キーワードを入力するとリアルタイムで検索を始めます。
+&lt;li&gt;入力欄フォーカス中は、エンターキー、矢印キーでベージ送りします。
+&lt;/ul&gt;
+
+&lt;script src=&quot;https://icck.github.io//index.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;style&gt;
+dd{
+	margin:0;
+	padding:0 0 1em 0.5em;
+	width:90%;
+}
+dd span{
+	font-size:80%;
+	color:#888;
+}
+dd b{
+	color:#666600;
+	background-color:#ffffdd;
+	font-weight:bold;
+	border:1px solid #bbbb00;
+	margin:0 2px 0 2px;
+	padding:0 2px 0 2px;
+}
+#navi{
+	margin:0.5rem 0;
+	line-height:2rem;
+}
+#navi span{
+	border-top:1px solid #d8d8d8;
+	border-bottom:1px solid #d8d8d8;
+	padding: 0.33rem 0.66rem;
+	cursor:pointer;
+	word-wrap:break-word;
+}
+#navi span.selected{
+	background: #D3EDF7;
+}
+#navi span:first-child{
+	border-left:1px solid #d8d8d8;
+	border-top-left-radius: 0.4rem;
+	border-bottom-left-radius: 0.4rem;
+}
+#navi span:last-child{
+	border-right:1px solid #d8d8d8;
+	border-top-right-radius: 0.4rem;
+	border-bottom-right-radius: 0.4rem;
+}
+
+#searchbox input{
+	font-size: 1;
+    padding: .3em;
+    margin-left:2em;
+	margin-bottom: 1em;
+}
+@media (max-width: 15em) {
+	#navi{
+		width:300px;
+	}
+}
+&lt;/style&gt;
+
+&lt;div id=&quot;searchbox&quot;&gt;
+&lt;input type=&quot;text&quot; id=&quot;q&quot; onkeyup=&quot;do_find(this.value)&quot; onkeydown=&quot;key(event.keyCode)&quot; autocomplete=&quot;off&quot; placeholder=&quot;サイト内を検索&quot;&gt; &lt;span class=&quot;fa fa-search&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;span id=&quot;stat&quot;&gt;&lt;/span&gt;
+&lt;div id=&quot;navi&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;result&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+window.onload=function(){
+	gid(&quot;q&quot;).focus();
+}
+
+{
+	$_ = String.prototype;
+	
+	$_.mReplace = function(pat,flag){
+		var temp = this;
+		if(!flag){flag=&quot;&quot;}
+		for(var i in pat){
+			var re = new RegExp(i,flag);
+			temp = temp.replace(re,pat[i])
+		}
+		return temp;
+	};
+}
+
+{
+	$_ = Date.prototype;
+	
+	$_.format = &quot;yyyy-mm-dd HH:MM:SS&quot;;
+	$_.formatTime = function(format){
+		var yy;
+		var o = {
+			yyyy : ((yy = this.getYear()) &lt; 2000)? yy+1900 : yy,
+			mm   : this.getMonth() + 1,
+			dd   : this.getDate(),
+			HH   : this.getHours(),
+			MM   : this.getMinutes(),
+			SS   : this.getSeconds()
+		}
+		for(var i in o){
+			if (o[i] &lt; 10) o[i] = &quot;0&quot; + o[i];
+		}
+		return (format) ? format.mReplace(o) : this.format.mReplace(o);
+	}
+}
+&lt;/script&gt;
+&lt;script&gt;
+var start = new Date().getTime();
+var bodylist = [];
+var st = gid(&quot;stat&quot;);
+var re = gid(&quot;result&quot;);
+var nv = gid(&quot;navi&quot;);
+var max = 5;
+var KC = {
+	enter: 13,
+	left : 37,
+	right: 39,
+	up   : 38,
+	down : 40
+};
+function gid(id){
+	return document.getElementById(id);
+}
+function ignore_case(){
+	var a = arguments;
+	return &quot;[&quot; + a[0] + a[0].toUpperCase() + &quot;]&quot;
+}
+function do_find(v){
+	if(this.lastquery == v){return}
+	this.lastquery = v;
+	var re = find(v);
+	if(re.length){
+		pagenavi(re);
+		view(re)
+	}
+}
+function key(c){
+	switch(c){
+		case KC.enter: mv(1);break;
+		case KC.left : mv(-1);break;
+		case KC.right: mv(1);break;
+		case KC.up   : mv(-1);break;
+		case KC.down : mv(1);break;
+	}
+}
+function find(v){
+	var query = v;
+	if(!v){return []}
+	var aimai;
+	if(query){
+
+
+		aimai = query.replace(/[a-z]/g,ignore_case);
+		try{
+			reg = new RegExp(aimai,&quot;g&quot;);
+		}catch(e){
+			reg = /(.)/g;
+		}
+	}else{
+		reg = /(.)/g;
+	}
+	var start = new Date().getTime();
+	var result = [];
+	for(var i=0;i&lt;data.length;i++){
+
+		var s = bodylist[i];
+		var res = reg.exec(s);
+		if(!res){continue}
+		var len = res[0].length;
+		var idx = res.index;
+		if(idx != -1){
+			result.push([i,idx,len]);
+		}
+	}
+	if(result.length){
+		st.innerHTML = result.length +&quot;件見つかりました。&quot;;
+	}
+	var end = new Date().getTime();
+
+	console.log(&quot;Find:&quot;+ (end-start) + &quot; ms&quot;);
+	return result;
+}
+function time2date(time){
+	if(!this.cache){this.cache = {}};
+	if(this.cache[time]) return this.cache[time];
+	var d = new Date(time*1000);
+	this.cache[time] = d.formatTime(&quot;yyyy年mm月dd日&quot;);
+	return this.cache[time];
+}
+function snippet(body,idx,len){
+	var start = idx - 20;
+	return [
+		body.substring(start,idx),
+		,&quot;&lt;b&gt;&quot;
+		,body.substr(idx,len)
+		,&quot;&lt;/b&gt;&quot;
+		,body.substr(idx+len,50),
+	].join(&quot;&quot;);
+}
+function pagenavi(result){
+	var len = result.length;
+	var ct = Math.ceil(len/max);
+	var buf = [];
+	for(var i=0;i&lt;ct;i++){
+		buf.push(
+			&quot;&lt;span onclick='view(\&quot;\&quot;,&quot;
+			,i+1
+			,&quot;);sw(&quot;,i,&quot;)'&gt;&quot;
+			,i+1
+			,&quot;&lt;/span&gt;&quot;
+		);
+	}
+	nv.innerHTML = buf.join(&quot;&quot;);
+	sw(0);
+}
+function sw(t){
+	var span = nv.getElementsByTagName(&quot;span&quot;);
+	for(var i=0;i&lt;span.length;i++){
+		span[i].className = (i==t)?&quot;selected&quot;:&quot;&quot;;
+	}
+}
+function mv(to){
+	var span = nv.getElementsByTagName(&quot;span&quot;);
+	var current;
+	if(!span.length){return}
+	for(var i=0;i&lt;span.length;i++){
+		if(span[i].className == &quot;selected&quot;){
+			current = i;break;
+		}
+	}
+	var moveto = current+to;
+	if(moveto &lt; 0){return}
+	if(moveto &gt; span.length-1){moveto=0}
+	sw(moveto);
+	view(&quot;&quot;,moveto+1)
+}
+function view(result,offset){
+	if(!offset){offset = 1}
+	if(!result){
+		result = this.last.reverse();
+	}else{
+		this.last = result;
+	}
+	var r = result.reverse();
+	var buf = [&quot;&lt;dl&gt;&quot;];
+	var count = 0;
+	for(var i=(offset-1)*max;i&lt;r.length;i++){
+		count++;
+		if(count &gt; max){break}
+		var num = r[i][0];
+		var idx = r[i][1];
+		var len = r[i][2];
+		with(data[num]){
+			buf.push(
+				&quot;&lt;dt&gt;&lt;a href='&quot;,url,&quot;'&gt;&quot;
+				,title||&quot;無題&quot;,&quot;&lt;/a&gt;&quot;
+				,&quot;&lt;dd&gt;&quot;
+
+
+
+				,snippet(bodylist[num],idx,len)
+			);
+		}
+	}
+	re.innerHTML = buf.join(&quot;&quot;);
+}
+for(var i=0;i&lt;data.length;i++){
+	bodylist.push(data[i].title+ &quot; &quot; +data[i].content);
+}
+var bodyidx = bodylist.join(&quot;&lt;&gt;&quot;);
+var end = new Date().getTime();
+
+console.log(&quot;Index:&quot;+ (end-start) + &quot; ms&quot;);
+&lt;/script&gt;
+
+	&lt;noscript&gt;&lt;p class=&quot;notice&quot;&gt;注意: この検索機能は JavaScript を使用しています。&lt;/p&gt;&lt;/noscript&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+{{ partial &quot;footer.html&quot; . }}
+</code></pre>
+
+<h2 id="検索ページの作成-1">検索ページの作成</h2>
+
+<pre><code>$ hugo new pages/search.md
+</code></pre>
+
+<pre><code>---
+date: 2019-08-28T22:01:57+09:00
+type:  &quot;search&quot;
+url: &quot;search&quot;
+title: &quot;全文検索&quot;
+---
+</code></pre>
+
+<h2 id="config-toml追記">config.toml追記</h2>
+
+<pre><code>[[menu.header]]
+name = &quot;search&quot;
+weight = 30
+url = &quot;/search&quot;
+</code></pre>
+
+            </div>
+            
+            <div class="post-comments">
+                
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2019 Issei Komori -
+<span class="credit">
+	Powered by
+	<a target="_blank" href="https://gohugo.io">Hugo</a>
+	and
+	<a target="_blank" href="https://github.com/LordMathis/hugo-theme-nix/">Nix</a> theme.
+</span>
+</p>
+</footer>
+
+    </body>
