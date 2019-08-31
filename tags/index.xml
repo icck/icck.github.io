@@ -6,7 +6,7 @@
     <description>Recent content in Tags on My icck Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>js</language>
-    <lastBuildDate>Thu, 29 Aug 2019 23:53:34 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 31 Aug 2019 23:56:43 +0900</lastBuildDate>
     
 	<atom:link href="https://icck.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>AWS</title>
       <link>https://icck.github.io/tags/aws/</link>
-      <pubDate>Thu, 29 Aug 2019 23:53:34 +0900</pubDate>
+      <pubDate>Sat, 31 Aug 2019 23:56:43 +0900</pubDate>
       
       <guid>https://icck.github.io/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DynamoDB</title>
+      <link>https://icck.github.io/tags/dynamodb/</link>
+      <pubDate>Sat, 31 Aug 2019 23:56:43 +0900</pubDate>
+      
+      <guid>https://icck.github.io/tags/dynamodb/</guid>
       <description></description>
     </item>
     
@@ -26,15 +35,6 @@
       <pubDate>Thu, 29 Aug 2019 23:53:34 +0900</pubDate>
       
       <guid>https://icck.github.io/tags/aws-cli/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DynamoDB</title>
-      <link>https://icck.github.io/tags/dynamodb/</link>
-      <pubDate>Thu, 29 Aug 2019 23:53:34 +0900</pubDate>
-      
-      <guid>https://icck.github.io/tags/dynamodb/</guid>
       <description></description>
     </item>
     

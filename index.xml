@@ -6,10 +6,19 @@
     <description>Recent content on My icck Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>js</language>
-    <lastBuildDate>Thu, 29 Aug 2019 23:53:34 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 31 Aug 2019 23:56:43 +0900</lastBuildDate>
     
 	<atom:link href="https://icck.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DynamoDBでSpaseIndexを利用するサンプル</title>
+      <link>https://icck.github.io/posts/2019-08-31/</link>
+      <pubDate>Sat, 31 Aug 2019 23:56:43 +0900</pubDate>
+      
+      <guid>https://icck.github.io/posts/2019-08-31/</guid>
+      <description> SpaseIndexとは  DynamoDBのデータ抽出アプローチのテクニックの１つ 特定Itemにしか設定していない項目にGSIを含めることでプライマリーキー、ソートキー以外のキーでデータ抽出を容易に 以下の悩みを解決（プライマリーキー、ソートキー以外のキーでデータ抽出）  scanだと高コスト、キーで検索しても高コスト、フィルターだとキー検索とコスト一緒   サンプル: gameから最優秀賞を取得 初期テーブル  game単位で最優秀スコアのデータを取得したい scoreの最優秀をawdという項目を用意。対象以外は項目を設定しない   awdを含めたグローバルセカンダリインデックスを作成 GSIを検索  最優秀賞が設定されている項目が少ないため、VIEWが出来た時点で絞り込まれている scanしても低コスト！←今回の一番のポイント  aws dynamodb scan --table-name game --index-name name-awd-index { &amp;#34;Count&amp;#34;: 1, &amp;#34;Items&amp;#34;: [ { &amp;#34;score&amp;#34;: { &amp;#34;S&amp;#34;: &amp;#34;3&amp;#34; }, &amp;#34;id&amp;#34;: { &amp;#34;S&amp;#34;: &amp;#34;user3&amp;#34; }, &amp;#34;awd&amp;#34;: { &amp;#34;S&amp;#34;: &amp;#34;cp&amp;#34; }, &amp;#34;name&amp;#34;: { &amp;#34;S&amp;#34;: &amp;#34;game1&amp;#34; } } ], &amp;#34;ScannedCount&amp;#34;: 1, &amp;#34;ConsumedCapacity&amp;#34;: null } </description>
+    </item>
     
     <item>
       <title>DynamoDBをaws cliで操作する</title>
