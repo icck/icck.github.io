@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://icck.github.io/posts/0005-dynamodb-ttl/</loc>
+    <lastmod>2019-09-01T09:17:57+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://icck.github.io/posts/2019-08-31/</loc>
     <lastmod>2019-08-31T23:56:43+09:00</lastmod>
   </url>
@@ -24,27 +29,27 @@
   
   <url>
     <loc>https://icck.github.io/tags/aws/</loc>
-    <lastmod>2019-08-31T23:56:43+09:00</lastmod>
+    <lastmod>2019-09-01T09:17:57+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://icck.github.io/tags/dynamodb/</loc>
-    <lastmod>2019-08-31T23:56:43+09:00</lastmod>
+    <lastmod>2019-09-01T09:17:57+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://icck.github.io/</loc>
-    <lastmod>2019-08-31T23:56:43+09:00</lastmod>
+    <lastmod>2019-09-01T09:17:57+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://icck.github.io/posts/</loc>
-    <lastmod>2019-08-31T23:56:43+09:00</lastmod>
+    <lastmod>2019-09-01T09:17:57+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://icck.github.io/tags/</loc>
-    <lastmod>2019-08-31T23:56:43+09:00</lastmod>
+    <lastmod>2019-09-01T09:17:57+09:00</lastmod>
   </url>
   
   <url>
