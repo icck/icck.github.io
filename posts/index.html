@@ -113,6 +113,19 @@ ga('create', 'UA-126514155-2', 'auto');
 				<li>
 					<div class="post-list-item">
 						<div class="post-header">
+							<h4 class="post-link"><a href="https://icck.github.io/posts/0006-fish-aws-cli/">fishでaws-cliの補完機能を使う</a></h4>
+							<h4 class="post-date">Sep 2, 2019</h4>
+						</div>
+						<div class="post-summary"><p>bash -&gt; fishに変更した場合、aws-cliの補完機能を有効にする方法 # 位置を特定します $ which aws_completer # 存在しない場合は作成します $ vim ~/.config/fish/config.fish # aws_completerのパスはwhichで調べたパスに適時変更しconfig.fishに追記して保存します $ complete -c aws -f -a &#39;(begin; set -lx COMP_SHELL fish; set -lx COMP_LINE (commandline); /usr/local/bin/aws_completer; end)&#39; #確認 $ aws s + tab さいごに これで、良いfish Lifeを過ごせます。</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://icck.github.io/posts/0006-fish-aws-cli/">Read More</a>
+						</div>
+					</div>
+				</li>
+			
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
 							<h4 class="post-link"><a href="https://icck.github.io/posts/0005-dynamodb-ttl/">Dynamodb TTL(Time to Live、データを自動削除する機能)を使ってみた</a></h4>
 							<h4 class="post-date">Sep 1, 2019</h4>
 						</div>

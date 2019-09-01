@@ -6,7 +6,7 @@
     <description>Recent content in Tags on My icck Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>js</language>
-    <lastBuildDate>Sun, 01 Sep 2019 09:17:57 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 02 Sep 2019 02:17:32 +0900</lastBuildDate>
     
 	<atom:link href="https://icck.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,27 @@
     <item>
       <title>AWS</title>
       <link>https://icck.github.io/tags/aws/</link>
-      <pubDate>Sun, 01 Sep 2019 09:17:57 +0900</pubDate>
+      <pubDate>Mon, 02 Sep 2019 02:17:32 +0900</pubDate>
       
       <guid>https://icck.github.io/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aws-cli</title>
+      <link>https://icck.github.io/tags/aws-cli/</link>
+      <pubDate>Mon, 02 Sep 2019 02:17:32 +0900</pubDate>
+      
+      <guid>https://icck.github.io/tags/aws-cli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fish</title>
+      <link>https://icck.github.io/tags/fish/</link>
+      <pubDate>Mon, 02 Sep 2019 02:17:32 +0900</pubDate>
+      
+      <guid>https://icck.github.io/tags/fish/</guid>
       <description></description>
     </item>
     
@@ -26,15 +44,6 @@
       <pubDate>Sun, 01 Sep 2019 09:17:57 +0900</pubDate>
       
       <guid>https://icck.github.io/tags/dynamodb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>aws-cli</title>
-      <link>https://icck.github.io/tags/aws-cli/</link>
-      <pubDate>Thu, 29 Aug 2019 23:53:34 +0900</pubDate>
-      
-      <guid>https://icck.github.io/tags/aws-cli/</guid>
       <description></description>
     </item>
     
