@@ -11,8 +11,8 @@ content: "[TTLとは レコード毎にデータの有効期限を指定でき�
 }
 ,{
 url: "https://icck.github.io/posts/2019-08-31/",
-title: "DynamoDBでSpaseIndexを利用するテクニック",
-content: "[SpaseIndexとは DynamoDBのデータ抽出アプローチのテクニックの１つ 特定Itemにしか設定していない項目にGSIを含めることでプライマリーキー、ソートキー以外のキーでデータ抽出を容易に 以下の悩みを解決（プライマリーキー、ソートキー以外のキーでデータ抽出） scanだと高コスト、キーで検索しても高コスト、フィルターだとキー検索とコスト一緒 サンプル: gameから最優秀賞を取得 初期テーブル game単位で最優秀スコアのデータを取得したい scoreの最優秀をawdという項目を用意。対象以外は項目を設定しない awdを含めたグローバルセカンダリインデックスを作成 GSIを検索 最優秀賞が設定されている項目が少ないため、VIEWが出来た時点で絞り込まれている scanしても低コスト！←今回の一番のポイント aws dynamodb scan --table-name game --index-name name-awd-index { &amp;#34;Count&amp;#34;: 1, &amp;#34;Items&amp;#34;: [ { &amp;#34;score&amp;#34;: { &amp;#34;S&amp;#34;: &amp;#34;3&amp;#34; }, &amp;#34;id&amp;#34;: { &amp;#34;S&amp;#34;: &amp;#34;user3&amp;#34; }, &amp;#34;awd&amp;#34;: { &amp;#34;S&amp;#34;: &amp;#34;cp&amp;#34; }, &amp;#34;name&amp;#34;: { &amp;#34;S&amp;#34;: &amp;#34;game1&amp;#34; } } ], &amp;#34;ScannedCount&amp;#34;: 1, &amp;#34;ConsumedCapacity&amp;#34;: null }]"
+title: "DynamoDBでSparse Indexesを利用するテクニック",
+content: "[Sparse Indexesとは DynamoDBのデータ抽出アプローチのテクニックの１つ 特定Itemにしか設定していない項目にGSIを含めることでプライマリーキー、ソートキー以外のキーでデータ抽出を容易に 以下の悩みを解決（プライマリーキー、ソートキー以外のキーでデータ抽出） scanだと高コスト、キーで検索しても高コスト、フィルターだとキー検索とコスト一緒 サンプル: gameから最優秀賞を取得 初期テーブル game単位で最優秀スコアのデータを取得したい scoreの最優秀をawdという項目を用意。対象以外は項目を設定しない awdを含めたグローバルセカンダリインデックスを作成 GSIを検索 最優秀賞が設定されている項目が少ないため、VIEWが出来た時点で絞り込まれている scanしても低コスト！←今回の一番のポイント aws dynamodb scan --table-name game --index-name name-awd-index { &amp;#34;Count&amp;#34;: 1, &amp;#34;Items&amp;#34;: [ { &amp;#34;score&amp;#34;: { &amp;#34;S&amp;#34;: &amp;#34;3&amp;#34; }, &amp;#34;id&amp;#34;: { &amp;#34;S&amp;#34;: &amp;#34;user3&amp;#34; }, &amp;#34;awd&amp;#34;: { &amp;#34;S&amp;#34;: &amp;#34;cp&amp;#34; }, &amp;#34;name&amp;#34;: { &amp;#34;S&amp;#34;: &amp;#34;game1&amp;#34; } } ], &amp;#34;ScannedCount&amp;#34;: 1, &amp;#34;ConsumedCapacity&amp;#34;: null }]"
 }
 ,{
 url: "https://icck.github.io/posts/2019-08-29/",
