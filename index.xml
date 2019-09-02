@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My icck Blog</title>
+    <title>icck&#39;s Blog</title>
     <link>https://icck.github.io/</link>
-    <description>Recent content on My icck Blog</description>
+    <description>Recent content on icck&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>js</language>
-    <lastBuildDate>Mon, 02 Sep 2019 02:17:32 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 02 Sep 2019 23:34:26 +0900</lastBuildDate>
     
 	<atom:link href="https://icck.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -71,10 +71,10 @@ Local環境を起動 $ hugo server --theme=hugo-theme-nix --buildDrafts --watch 
     <item>
       <title>About</title>
       <link>https://icck.github.io/about/</link>
-      <pubDate>Wed, 28 Aug 2019 23:32:26 +0900</pubDate>
+      <pubDate>Mon, 02 Sep 2019 23:34:26 +0900</pubDate>
       
       <guid>https://icck.github.io/about/</guid>
-      <description> 準備中 </description>
+      <description> About Me { &amp;quot;名前&amp;quot;: &amp;quot;Issei Komori&amp;quot;, &amp;quot;よく書くこと&amp;quot;: [ &amp;quot;AWS&amp;quot;, &amp;quot;気になったツール&amp;quot; ], &amp;quot;資格&amp;quot;: [ &amp;quot;SAA&amp;quot;, &amp;quot;Oracle Silver&amp;quot;, &amp;quot;Java Silver&amp;quot; ], &amp;quot;スキル&amp;quot;: [ &amp;quot;AWS&amp;quot;, &amp;quot;Java&amp;quot;, &amp;quot;SQL-Oracle&amp;quot; ], &amp;quot;SNS&amp;quot;: [ &amp;quot;Github: https://twitter.com/icckx&amp;quot;, &amp;quot;Qiita: https://qiita.com/icck&amp;quot;, &amp;quot;Twitter: @icckx&amp;quot; ] }  </description>
     </item>
     
     <item>

@@ -33,6 +33,16 @@
   </url>
   
   <url>
+    <loc>https://icck.github.io/about/</loc>
+    <lastmod>2019-09-02T23:34:26+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://icck.github.io/</loc>
+    <lastmod>2019-09-02T23:34:26+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://icck.github.io/tags/aws/</loc>
     <lastmod>2019-09-02T02:17:32+09:00</lastmod>
   </url>
@@ -44,11 +54,6 @@
   
   <url>
     <loc>https://icck.github.io/tags/fish/</loc>
-    <lastmod>2019-09-02T02:17:32+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://icck.github.io/</loc>
     <lastmod>2019-09-02T02:17:32+09:00</lastmod>
   </url>
   
@@ -65,11 +70,6 @@
   <url>
     <loc>https://icck.github.io/tags/dynamodb/</loc>
     <lastmod>2019-09-01T09:17:57+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://icck.github.io/about/</loc>
-    <lastmod>2019-08-28T23:32:26+09:00</lastmod>
   </url>
   
   <url>
