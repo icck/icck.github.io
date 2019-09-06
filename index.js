@@ -1,5 +1,10 @@
 var data = [
 {
+url: "https://icck.github.io/posts/0008-fizzbuzz/",
+title: "JavaでLambdaを利用してFizzBuzzしてみた",
+content: "[FizzBuzzとは エンジニアがテストコードでよく書くネタ。Wiki参照 https://ja.wikipedia.org/wiki/Fizz_Buzz Javaなら1行でシンプルに書ける。そうLambdaならね import java.util.stream.IntStream; public class FizzBuzz { public static void main(String[] args) { IntStream.rangeClosed(1, 100).forEach( i -&amp;gt; System.out.format(&amp;#34;%s%s%n&amp;#34;, (i%3 == 0 ? &amp;#34;Fizz&amp;#34; : &amp;#34;&amp;#34;), (i%5 == 0 ? &amp;#34;Buzz&amp;#34; : (i%3 == 0 ? &amp;#34;&amp;#34; : i)) ) ); } }]"
+}
+,{
 url: "https://icck.github.io/posts/0006-fish-aws-cli/",
 title: "fishでaws-cliの補完機能を使う",
 content: "[bash -&amp;gt; fishに変更した場合、aws-cliの補完機能を有効にする方法 # 位置を特定します $ which aws_completer # 存在しない場合は作成します $ vim ~/.config/fish/config.fish # aws_completerのパスはwhichで調べたパスに適時変更しconfig.fishに追記して保存します $ complete -c aws -f -a &amp;#39;(begin; set -lx COMP_SHELL fish; set -lx COMP_LINE (commandline); /usr/local/bin/aws_completer; end)&amp;#39; #確認 $ aws s &#43; tab さいごに これで、良いfish Lifeを過ごせます。]"

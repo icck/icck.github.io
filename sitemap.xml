@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://icck.github.io/posts/0008-fizzbuzz/</loc>
+    <lastmod>2019-09-06T23:44:41+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://icck.github.io/posts/0006-fish-aws-cli/</loc>
     <lastmod>2019-09-02T02:17:32+09:00</lastmod>
   </url>
@@ -33,12 +38,27 @@
   </url>
   
   <url>
-    <loc>https://icck.github.io/about/</loc>
-    <lastmod>2019-09-02T23:34:26+09:00</lastmod>
+    <loc>https://icck.github.io/</loc>
+    <lastmod>2019-09-06T23:44:41+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://icck.github.io/</loc>
+    <loc>https://icck.github.io/tags/java/</loc>
+    <lastmod>2019-09-06T23:44:41+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://icck.github.io/posts/</loc>
+    <lastmod>2019-09-06T23:44:41+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://icck.github.io/tags/</loc>
+    <lastmod>2019-09-06T23:44:41+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://icck.github.io/about/</loc>
     <lastmod>2019-09-02T23:34:26+09:00</lastmod>
   </url>
   
@@ -54,16 +74,6 @@
   
   <url>
     <loc>https://icck.github.io/tags/fish/</loc>
-    <lastmod>2019-09-02T02:17:32+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://icck.github.io/posts/</loc>
-    <lastmod>2019-09-02T02:17:32+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://icck.github.io/tags/</loc>
     <lastmod>2019-09-02T02:17:32+09:00</lastmod>
   </url>
   
