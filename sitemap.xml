@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://icck.github.io/posts/0007-codecommit/</loc>
+    <lastmod>2019-09-06T21:38:30+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://icck.github.io/posts/0006-fish-aws-cli/</loc>
     <lastmod>2019-09-02T02:17:32+09:00</lastmod>
   </url>
@@ -58,13 +63,18 @@
   </url>
   
   <url>
-    <loc>https://icck.github.io/about/</loc>
-    <lastmod>2019-09-02T23:34:26+09:00</lastmod>
+    <loc>https://icck.github.io/tags/aws/</loc>
+    <lastmod>2019-09-06T21:38:30+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://icck.github.io/tags/aws/</loc>
-    <lastmod>2019-09-02T02:17:32+09:00</lastmod>
+    <loc>https://icck.github.io/tags/codecommit/</loc>
+    <lastmod>2019-09-06T21:38:30+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://icck.github.io/about/</loc>
+    <lastmod>2019-09-02T23:34:26+09:00</lastmod>
   </url>
   
   <url>
