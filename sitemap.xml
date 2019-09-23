@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://icck.github.io/posts/0011-wsl/</loc>
+    <lastmod>2019-09-24T00:01:11+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://icck.github.io/posts/0010-qiita-python/</loc>
     <lastmod>2019-09-17T23:00:33+09:00</lastmod>
   </url>
@@ -53,22 +58,32 @@
   </url>
   
   <url>
+    <loc>https://icck.github.io/</loc>
+    <lastmod>2019-09-24T00:01:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://icck.github.io/posts/</loc>
+    <lastmod>2019-09-24T00:01:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://icck.github.io/tags/</loc>
+    <lastmod>2019-09-24T00:01:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://icck.github.io/tags/wsl/</loc>
+    <lastmod>2019-09-24T00:01:11+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://icck.github.io/tags/aws/</loc>
     <lastmod>2019-09-17T23:00:33+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://icck.github.io/</loc>
-    <lastmod>2019-09-17T23:00:33+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://icck.github.io/tags/lambda/</loc>
-    <lastmod>2019-09-17T23:00:33+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://icck.github.io/posts/</loc>
     <lastmod>2019-09-17T23:00:33+09:00</lastmod>
   </url>
   
@@ -79,11 +94,6 @@
   
   <url>
     <loc>https://icck.github.io/tags/qiita/</loc>
-    <lastmod>2019-09-17T23:00:33+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://icck.github.io/tags/</loc>
     <lastmod>2019-09-17T23:00:33+09:00</lastmod>
   </url>
   

@@ -113,6 +113,19 @@ ga('create', 'UA-126514155-2', 'auto');
 				<li>
 					<div class="post-list-item">
 						<div class="post-header">
+							<h4 class="post-link"><a href="https://icck.github.io/posts/0011-wsl/">WSLの設定</a></h4>
+							<h4 class="post-date">Sep 24, 2019</h4>
+						</div>
+						<div class="post-summary"><p>WSL(Windows Subsystem for Linux)の設定 前提  WSLが利用可能であること Ubuntu18.04  Setup # 日本からミラーするように sudo sed -i -e &#39;s%http://.*.ubuntu.com%http://ftp.jaist.ac.jp/pub/Linux%g&#39; /etc/apt/sources.list # アップデート sudo apt update -y &amp;&amp; apt upgrade -y # fish 準備 sudo apt-add-repository ppa:fish-shell/release-3 sudo apt update -y # install fish sudo apt install -y fish # change default shell chsh -s /usr/bin/fish # install fisher curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher fisher -v # add theme fisher add oh-my-fish/theme-agnoster # font powerline git clone https://github.</p></div>
+						<div class="post-list-footer text-center">
+							<a href="https://icck.github.io/posts/0011-wsl/">Read More</a>
+						</div>
+					</div>
+				</li>
+			
+				<li>
+					<div class="post-list-item">
+						<div class="post-header">
 							<h4 class="post-link"><a href="https://icck.github.io/posts/0010-qiita-python/">Qiita API②いいねとVIEW数をLambdaで取得してS3へ保存</a></h4>
 							<h4 class="post-date">Sep 17, 2019</h4>
 						</div>
@@ -246,22 +259,38 @@ https://icck.github.io/search/
 					</div>
 				</li>
 			
-				<li>
-					<div class="post-list-item">
-						<div class="post-header">
-							<h4 class="post-link"><a href="https://icck.github.io/posts/000/">Hugoブログ更新方法</a></h4>
-							<h4 class="post-date">Aug 26, 2019</h4>
-						</div>
-						<div class="post-summary"><p> Hugoの使い方を今後のブログ更新のために Hugoでブログを書いていく上で、運用方法をメモしていこうと思います。 インストール等は気が向いたときに
-Local環境を起動 $ hugo server --theme=hugo-theme-nix --buildDrafts --watch 記事の作成 $ hugo new post/test.md --- title: &#34;test&#34; date: 2019-08-26T01:14:23+09:00 draft: true ---  title:記事のタイトルに修正 date:作成時刻のため、そのまま draft:trueが非公開。falseに変更し公開  Sample --- title: &#34;test&#34; date: 2019-08-26T01:14:23+09:00 draft: false --- ## ここにマークダウンで本文を記載 githubへpush ./deploy.sh </p></div>
-						<div class="post-list-footer text-center">
-							<a href="https://icck.github.io/posts/000/">Read More</a>
-						</div>
-					</div>
-				</li>
-			
 			</ul>
             
+
+<div class="pagination-wrapper text-center">
+  <ul class="pagination">
+      
+      <li>
+          <a href="/posts/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      
+      <li
+      class="disabled">
+          <a href="" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      
+      <li
+      class="active"><a href="/posts/">1</a></li>
+      
+      <li
+      ><a href="/posts/page/2/">2</a></li>
+      
+      <li
+      >
+          <a href="/posts/page/2/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      
+      <li>
+          <a href="/posts/page/2/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+      
+    </ul>
+</div>
 
 
 
