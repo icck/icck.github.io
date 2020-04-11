@@ -1,5 +1,10 @@
 var data = [
 {
+url: "https://icck.github.io/posts/0013-gitsubmodule/",
+title: "Git Submodule化できないときの対処",
+content: "[Git Submodule化できないときの対処 キャッシュが残っている可能性 まずは、キャッシュのクリアを行います。 git rm –cached サブモジュールディレクトリ git submodule update --init --recursive サブモジュールの削除 既に存在しているサブモジュールがあったら削除してしまいます。 ディレクトリごと消すことがポイント git submodule deinit -f サブモジュールディレクトリ git rm -f サブモジュールディレクトリ サブモジュールの追加 正しく追加できていれば2つのgitがソース管理プロバイダーに見えているはずです。 git submodule add git@github.com:&amp;lt;user&amp;gt;/&amp;lt;path&amp;gt;.git]"
+}
+,{
 url: "https://icck.github.io/posts/0012-oracle-curerror/",
 title: "[調査方法]Oracle ORA-01000 最大オープン・カーソル数を超えました。[V$OPEN_CURSOR]",
 content: "[Oracle ORA-01000 最大オープン・カーソル数を超えました。 Oracle(PLSQL)でカーソルに関するエラーが発生しハマったときの対処方法メモ 原因としてはカーソルを「オープン」と「クローズ」の数の不一致 私の場合は、オープンがループ内で行われており、クローズはループの外にあったためオープンし過ぎでエラーになりました。 調査方法 1.カーソルの最大数を確認します。 これが小さすぎるのが原因の場合はSet文でOracleの設定変更しましょう。 show parameters open_cursors; 2.カーソルの数を確認します。 私はブレークポイントデバッグを行いながらcount(1)の増加を確認しプログラムによるカーソル増加を特定しました。 自分が動作させているプログラムと確定している場合はuser_nameを条件に設定します。 具体的なプログラム名を特定するにはsidから調査します。 select sid , user_name , count(1) from V$OPEN_CURSOR group by sid, user_name having count(1) &amp;gt; 10 -- ここは最大数に応じて調整 ; さいごに 明示的にオープン、フェッチ、クローズをコードに記載すると通常処理はもちろんエラー処理での適切なクローズを求められます。 暗黙、明示どちらでもよいですが、FORループを利用してコードを記述したほうがバグのリスクを減らすことが出来るためオススメだと思っています。]"

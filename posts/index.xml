@@ -6,10 +6,19 @@
     <description>Recent content in Posts on icck&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>js</language>
-    <lastBuildDate>Thu, 26 Sep 2019 00:12:50 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2020 01:15:02 +0900</lastBuildDate>
     
 	<atom:link href="https://icck.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git Submodule化できないときの対処</title>
+      <link>https://icck.github.io/posts/0013-gitsubmodule/</link>
+      <pubDate>Sun, 12 Apr 2020 01:15:02 +0900</pubDate>
+      
+      <guid>https://icck.github.io/posts/0013-gitsubmodule/</guid>
+      <description> Git Submodule化できないときの対処 キャッシュが残っている可能性  まずは、キャッシュのクリアを行います。  git rm –cached サブモジュールディレクトリ git submodule update --init --recursive サブモジュールの削除  既に存在しているサブモジュールがあったら削除してしまいます。 ディレクトリごと消すことがポイント  git submodule deinit -f サブモジュールディレクトリ git rm -f サブモジュールディレクトリ サブモジュールの追加  正しく追加できていれば2つのgitがソース管理プロバイダーに見えているはずです。  git submodule add git@github.com:&amp;lt;user&amp;gt;/&amp;lt;path&amp;gt;.git  </description>
+    </item>
     
     <item>
       <title>[調査方法]Oracle ORA-01000 最大オープン・カーソル数を超えました。[V$OPEN_CURSOR]</title>
