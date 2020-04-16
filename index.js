@@ -2,7 +2,7 @@ var data = [
 {
 url: "https://icck.github.io/posts/0014-nodejs-upgrade-windows/",
 title: "Node.jsをUpgradeする手順（Windows）",
-content: "[事前作業：version確認 $ node -v v10.15.0 $ npm -v 6.4.1 最新版をインストール サイトにからLTSをダウンロードしインストール https://nodejs.org/ja/ すべて次へ。 インストール後：version確認 $ node -v v12.16.2 $ npm -v 6.14.4]"
+content: "[事前作業：version確認 $ node -v v10.15.0 $ npm -v 6.4.1 最新版をインストール サイトにからLTSをダウンロードしインストール https://nodejs.org/ja/ すべて次へ。 インストール後：version確認 $ node -v v12.16.2 $ npm -v 6.14.4 おまけ（yarnをUpgradeしてみる） $ yarn -v 1.13.0 $ npm uninstall yarn -g $ npm install yarn -g $ yarn -v 1.22.4]"
 }
 ,{
 url: "https://icck.github.io/posts/0013-gitsubmodule/",
