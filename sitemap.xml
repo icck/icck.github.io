@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://icck.github.io/posts/0014-nodejs-upgrade-windows/</loc>
+    <lastmod>2020-04-17T00:28:07+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://icck.github.io/posts/0013-gitsubmodule/</loc>
     <lastmod>2020-04-12T01:15:02+09:00</lastmod>
   </url>
@@ -68,22 +73,27 @@
   </url>
   
   <url>
-    <loc>https://icck.github.io/tags/git/</loc>
-    <lastmod>2020-04-12T01:15:02+09:00</lastmod>
+    <loc>https://icck.github.io/</loc>
+    <lastmod>2020-04-17T00:28:07+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://icck.github.io/</loc>
-    <lastmod>2020-04-12T01:15:02+09:00</lastmod>
+    <loc>https://icck.github.io/tags/node.js/</loc>
+    <lastmod>2020-04-17T00:28:07+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://icck.github.io/posts/</loc>
-    <lastmod>2020-04-12T01:15:02+09:00</lastmod>
+    <lastmod>2020-04-17T00:28:07+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://icck.github.io/tags/</loc>
+    <lastmod>2020-04-17T00:28:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://icck.github.io/tags/git/</loc>
     <lastmod>2020-04-12T01:15:02+09:00</lastmod>
   </url>
   

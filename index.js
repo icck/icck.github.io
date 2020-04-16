@@ -1,5 +1,10 @@
 var data = [
 {
+url: "https://icck.github.io/posts/0014-nodejs-upgrade-windows/",
+title: "Node.jsをUpgradeする手順（Windows）",
+content: "[事前作業：version確認 $ node -v v10.15.0 $ npm -v 6.4.1 最新版をインストール サイトにからLTSをダウンロードしインストール https://nodejs.org/ja/ すべて次へ。 インストール後：version確認 $ node -v v12.16.2 $ npm -v 6.14.4]"
+}
+,{
 url: "https://icck.github.io/posts/0013-gitsubmodule/",
 title: "Git Submodule化できないときの対処",
 content: "[Git Submodule化できないときの対処 キャッシュが残っている可能性 まずは、キャッシュのクリアを行います。 git rm –cached サブモジュールディレクトリ git submodule update --init --recursive サブモジュールの削除 既に存在しているサブモジュールがあったら削除してしまいます。 ディレクトリごと消すことがポイント git submodule deinit -f サブモジュールディレクトリ git rm -f サブモジュールディレクトリ サブモジュールの追加 正しく追加できていれば2つのgitがソース管理プロバイダーに見えているはずです。 git submodule add git@github.com:&amp;lt;user&amp;gt;/&amp;lt;path&amp;gt;.git]"

@@ -6,10 +6,21 @@
     <description>Recent content in Posts on icck&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>js</language>
-    <lastBuildDate>Sun, 12 Apr 2020 01:15:02 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2020 00:28:07 +0900</lastBuildDate>
     
 	<atom:link href="https://icck.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Node.jsをUpgradeする手順（Windows）</title>
+      <link>https://icck.github.io/posts/0014-nodejs-upgrade-windows/</link>
+      <pubDate>Fri, 17 Apr 2020 00:28:07 +0900</pubDate>
+      
+      <guid>https://icck.github.io/posts/0014-nodejs-upgrade-windows/</guid>
+      <description> 事前作業：version確認 $ node -v v10.15.0 $ npm -v 6.4.1  最新版をインストール  サイトにからLTSをダウンロードしインストール https://nodejs.org/ja/
+ すべて次へ。
+  インストール後：version確認 $ node -v v12.16.2 $ npm -v 6.14.4  </description>
+    </item>
     
     <item>
       <title>Git Submodule化できないときの対処</title>
