@@ -6,7 +6,7 @@
 
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.71.1" />
 
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
@@ -116,7 +116,7 @@ ga('create', 'UA-126514155-2', 'auto');
 							<h4 class="post-link"><a href="https://icck.github.io/posts/2019-08-31/">DynamoDBでSparse Indexesを利用するテクニック</a></h4>
 							<h4 class="post-date">Aug 31, 2019</h4>
 						</div>
-						<div class="post-summary"><p> Sparse Indexesとは  DynamoDBのデータ抽出アプローチのテクニックの１つ 特定Itemにしか設定していない項目にGSIを含めることでプライマリーキー、ソートキー以外のキーでデータ抽出を容易に 以下の悩みを解決（プライマリーキー、ソートキー以外のキーでデータ抽出）  scanだと高コスト、キーで検索しても高コスト、フィルターだとキー検索とコスト一緒   サンプル: gameから最優秀賞を取得 初期テーブル  game単位で最優秀スコアのデータを取得したい scoreの最優秀をawdという項目を用意。対象以外は項目を設定しない   awdを含めたグローバルセカンダリインデックスを作成 GSIを検索  最優秀賞が設定されている項目が少ないため、VIEWが出来た時点で絞り込まれている scanしても低コスト！←今回の一番のポイント  aws dynamodb scan --table-name game --index-name name-awd-index { &#34;Count&#34;: 1, &#34;Items&#34;: [ { &#34;score&#34;: { &#34;S&#34;: &#34;3&#34; }, &#34;id&#34;: { &#34;S&#34;: &#34;user3&#34; }, &#34;awd&#34;: { &#34;S&#34;: &#34;cp&#34; }, &#34;name&#34;: { &#34;S&#34;: &#34;game1&#34; } } ], &#34;ScannedCount&#34;: 1, &#34;ConsumedCapacity&#34;: null } </p></div>
+						<div class="post-summary"><p>Sparse Indexesとは  DynamoDBのデータ抽出アプローチのテクニックの１つ 特定Itemにしか設定していない項目にGSIを含めることでプライマリーキー、ソートキー以外のキーでデータ抽出を容易に 以下の悩みを解決（プライマリーキー、ソートキー以外のキーでデータ抽出）  scanだと高コスト、キーで検索しても高コスト、フィルターだとキー検索とコスト一緒    サンプル: gameから最優秀賞を取得 初期テーブル  game単位で最優秀スコアのデータを取得したい scoreの最優秀をawdという項目を用意。対象以外は項目を設定しない   awdを含めたグローバルセカンダリインデックスを作成 GSIを検索  最優秀賞が設定されている項目が少ないため、VIEWが出来た時点で絞り込まれている scanしても低コスト！←今回の一番のポイント  aws dynamodb scan --table-name game --index-name name-awd-index { &#34;Count&#34;: 1, &#34;Items&#34;: [ { &#34;score&#34;: { &#34;S&#34;: &#34;3&#34; }, &#34;id&#34;: { &#34;S&#34;: &#34;user3&#34; }, &#34;awd&#34;: { &#34;S&#34;: &#34;cp&#34; }, &#34;name&#34;: { &#34;S&#34;: &#34;game1&#34; } } ], &#34;ScannedCount&#34;: 1, &#34;ConsumedCapacity&#34;: null } </p></div>
 						<div class="post-list-footer text-center">
 							<a href="https://icck.github.io/posts/2019-08-31/">Read More</a>
 						</div>
@@ -129,7 +129,7 @@ ga('create', 'UA-126514155-2', 'auto');
 							<h4 class="post-link"><a href="https://icck.github.io/posts/2019-08-29/">DynamoDBをaws cliで操作する</a></h4>
 							<h4 class="post-date">Aug 29, 2019</h4>
 						</div>
-						<div class="post-summary"><p>Create Table (sample:mails) aws dynamodb create-table --table-name mails \ --attribute-definitions \  AttributeName=id,AttributeType=S \  AttributeName=Name,AttributeType=S \ --key-schema \  AttributeName=id,KeyType=HASH \  AttributeName=Name,KeyType=RANGE \ --provisioned-throughput \  ReadCapacityUnits=2,WriteCapacityUnits=2  attribute-definitions  プライマリーキーとソートキーを定義する それ以外のキーはテーブル作成時には定義しなくても良い  key-schema  HASH パーティションキー RANGE ソートキー  provisioned-throughput  ReadCapacityUnits 読み込みスループット WriteCapacityUnits 書き込みスループット   put-item aws dynamodb put-item \  --table-name mails \  --item &#39;{&#34;id&#34;: {&#34;S&#34;: &#34;testid1&#34;},&#34;Name&#34;: {&#34;S&#34;: &#34;Alice&#34;},&#34;mail&#34;: {&#34;S&#34;: &#34;alice@test.mail&#34;} }&#39; \  --return-consumed-capacity TOTAL { &#34;ConsumedCapacity&#34;: { &#34;CapacityUnits&#34;: 1.</p></div>
+						<div class="post-summary"><p>Create Table (sample:mails) aws dynamodb create-table --table-name mails \ --attribute-definitions \  AttributeName=id,AttributeType=S \  AttributeName=Name,AttributeType=S \ --key-schema \  AttributeName=id,KeyType=HASH \  AttributeName=Name,KeyType=RANGE \ --provisioned-throughput \  ReadCapacityUnits=2,WriteCapacityUnits=2  attribute-definitions  プライマリーキーとソートキーを定義する それ以外のキーはテーブル作成時には定義しなくても良い   key-schema  HASH  パーティションキー   RANGE  ソートキー     provisioned-throughput  ReadCapacityUnits  読み込みスループット   WriteCapacityUnits  書き込みスループット      put-item aws dynamodb put-item \  --table-name mails \  --item &#39;{&#34;id&#34;: {&#34;S&#34;: &#34;testid1&#34;},&#34;Name&#34;: {&#34;S&#34;: &#34;Alice&#34;},&#34;mail&#34;: {&#34;S&#34;: &#34;alice@test.</p></div>
 						<div class="post-list-footer text-center">
 							<a href="https://icck.github.io/posts/2019-08-29/">Read More</a>
 						</div>
@@ -144,7 +144,7 @@ ga('create', 'UA-126514155-2', 'auto');
 						</div>
 						<div class="post-summary"><p>完成したもの まずは動いているものは以下になります。
 https://icck.github.io/search/
-作業手順  手順を順に記載していきます。以下の記事を参考にさせていただきました。 http://rs.luminousspice.com/hugo-site-search/ https://snap.textgh.org/post/full-text-search-in-hugo/  インデックスファイルのテンプレート $ mkdir ./layouts/js $ touch ./layouts/js/single.html var data = [{{ range $index, $page := where .Site.Pages &#34;Section&#34; &#34;posts&#34;}} {{ if ne $index 0 }},{{ end }}{ url: &#34;{{ $page.Permalink }}&#34;, title: &#34;{{ $page.Title }}&#34;, content: &#34;{{ .PlainWords }}&#34; }{{ end }}]  インデックスファイルを生成する空の投稿 $ hugo new pages/indexjs.md --- date: 2019-08-28T21:50:35+09:00 type: &#34;js&#34; url: &#34;index.js&#34; --- 検索ページの作成 検索ページテンプレートの作成 $ mkdir .</p></div>
+作業手順  手順を順に記載していきます。以下の記事を参考にさせていただきました。 http://rs.luminousspice.com/hugo-site-search/ https://snap.textgh.org/post/full-text-search-in-hugo/  インデックスファイルのテンプレート $ mkdir ./layouts/js $ touch ./layouts/js/single.html var data = [{{ range $index, $page := where .Site.Pages &#34;Section&#34; &#34;posts&#34;}} {{ if ne $index 0 }},{{ end }}{ url: &#34;{{ $page.Permalink }}&#34;, title: &#34;{{ $page.Title }}&#34;, content: &#34;{{ .PlainWords }}&#34; }{{ end }}]  インデックスファイルを生成する空の投稿 $ hugo new pages/indexjs.md --- date: 2019-08-28T21:50:35+09:00 type: &#34;js&#34; url: &#34;index.js&#34; --- 検索ページの作成 検索ページテンプレートの作成 $ mkdir ./layouts/search/ $ touch .</p></div>
 						<div class="post-list-footer text-center">
 							<a href="https://icck.github.io/posts/2019-08-28/">Read More</a>
 						</div>
@@ -157,7 +157,7 @@ https://icck.github.io/search/
 							<h4 class="post-link"><a href="https://icck.github.io/posts/000/">Hugoブログ更新方法</a></h4>
 							<h4 class="post-date">Aug 26, 2019</h4>
 						</div>
-						<div class="post-summary"><p> Hugoの使い方を今後のブログ更新のために Hugoでブログを書いていく上で、運用方法をメモしていこうと思います。 インストール等は気が向いたときに。
+						<div class="post-summary"><p>Hugoの使い方を今後のブログ更新のために Hugoでブログを書いていく上で、運用方法をメモしていこうと思います。 インストール等は気が向いたときに。
 Local環境を起動 $ hugo server --theme=hugo-theme-nix --buildDrafts --watch 記事の作成 $ hugo new post/test.md --- title: &#34;test&#34; date: 2019-08-26T01:14:23+09:00 draft: true ---  title:記事のタイトルに修正 date:作成時刻のため、そのまま draft:trueが非公開。falseに変更し公開  Sample --- title: &#34;test&#34; date: 2019-08-26T01:14:23+09:00 draft: false --- ## ここにマークダウンで本文を記載 githubへpush ./deploy.sh </p></div>
 						<div class="post-list-footer text-center">
 							<a href="https://icck.github.io/posts/000/">Read More</a>

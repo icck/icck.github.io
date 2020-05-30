@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Node.js on icck&#39;s Blog</title>
@@ -17,8 +17,8 @@
       <pubDate>Fri, 17 Apr 2020 00:28:07 +0900</pubDate>
       
       <guid>https://icck.github.io/posts/0014-nodejs-upgrade-windows/</guid>
-      <description> 事前作業：version確認 $ node -v v10.15.0 $ npm -v 6.4.1  最新版をインストール  サイトにからLTSをダウンロードしインストール https://nodejs.org/ja/
- すべて次へ。
+      <description>事前作業：version確認 $ node -v v10.15.0 $ npm -v 6.4.1  最新版をインストール   サイトにからLTSをダウンロードしインストール https://nodejs.org/ja/
+  すべて次へ。
   インストール後：version確認 $ node -v v12.16.2 $ npm -v 6.14.4  おまけ（yarnをUpgradeしてみる） $ yarn -v 1.13.0 $ npm uninstall yarn -g $ npm install yarn -g $ yarn -v 1.22.4  </description>
     </item>
     

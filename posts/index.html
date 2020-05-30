@@ -6,7 +6,7 @@
 
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.71.1" />
 
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
@@ -116,8 +116,8 @@ ga('create', 'UA-126514155-2', 'auto');
 							<h4 class="post-link"><a href="https://icck.github.io/posts/0014-nodejs-upgrade-windows/">Node.jsをUpgradeする手順（Windows）</a></h4>
 							<h4 class="post-date">Apr 17, 2020</h4>
 						</div>
-						<div class="post-summary"><p> 事前作業：version確認 $ node -v v10.15.0 $ npm -v 6.4.1  最新版をインストール  サイトにからLTSをダウンロードしインストール https://nodejs.org/ja/
- すべて次へ。
+						<div class="post-summary"><p>事前作業：version確認 $ node -v v10.15.0 $ npm -v 6.4.1  最新版をインストール   サイトにからLTSをダウンロードしインストール https://nodejs.org/ja/
+  すべて次へ。
   インストール後：version確認 $ node -v v12.16.2 $ npm -v 6.14.4  おまけ（yarnをUpgradeしてみる） $ yarn -v 1.13.0 $ npm uninstall yarn -g $ npm install yarn -g $ yarn -v 1.22.4  </p></div>
 						<div class="post-list-footer text-center">
 							<a href="https://icck.github.io/posts/0014-nodejs-upgrade-windows/">Read More</a>
@@ -131,7 +131,7 @@ ga('create', 'UA-126514155-2', 'auto');
 							<h4 class="post-link"><a href="https://icck.github.io/posts/0013-gitsubmodule/">Git Submodule化できないときの対処</a></h4>
 							<h4 class="post-date">Apr 12, 2020</h4>
 						</div>
-						<div class="post-summary"><p> Git Submodule化できないときの対処 キャッシュが残っている可能性  まずは、キャッシュのクリアを行います。  git rm –cached サブモジュールディレクトリ git submodule update --init --recursive サブモジュールの削除  既に存在しているサブモジュールがあったら削除してしまいます。 ディレクトリごと消すことがポイント  git submodule deinit -f サブモジュールディレクトリ git rm -f サブモジュールディレクトリ サブモジュールの追加  正しく追加できていれば2つのgitがソース管理プロバイダーに見えているはずです。  git submodule add git@github.com:&lt;user&gt;/&lt;path&gt;.git  </p></div>
+						<div class="post-summary"><p>Git Submodule化できないときの対処 キャッシュが残っている可能性  まずは、キャッシュのクリアを行います。  git rm –cached サブモジュールディレクトリ git submodule update --init --recursive サブモジュールの削除  既に存在しているサブモジュールがあったら削除してしまいます。 ディレクトリごと消すことがポイント  git submodule deinit -f サブモジュールディレクトリ git rm -f サブモジュールディレクトリ サブモジュールの追加  正しく追加できていれば2つのgitがソース管理プロバイダーに見えているはずです。  git submodule add git@github.com:&lt;user&gt;/&lt;path&gt;.git  </p></div>
 						<div class="post-list-footer text-center">
 							<a href="https://icck.github.io/posts/0013-gitsubmodule/">Read More</a>
 						</div>
@@ -144,7 +144,7 @@ ga('create', 'UA-126514155-2', 'auto');
 							<h4 class="post-link"><a href="https://icck.github.io/posts/0012-oracle-curerror/">[調査方法]Oracle ORA-01000 最大オープン・カーソル数を超えました。[V$OPEN_CURSOR]</a></h4>
 							<h4 class="post-date">Sep 26, 2019</h4>
 						</div>
-						<div class="post-summary"><p> Oracle ORA-01000 最大オープン・カーソル数を超えました。  Oracle(PLSQL)でカーソルに関するエラーが発生しハマったときの対処方法メモ 原因としてはカーソルを「オープン」と「クローズ」の数の不一致  私の場合は、オープンがループ内で行われており、クローズはループの外にあったためオープンし過ぎでエラーになりました。   調査方法 1.カーソルの最大数を確認します。  これが小さすぎるのが原因の場合はSet文でOracleの設定変更しましょう。  show parameters open_cursors; 2.カーソルの数を確認します。  私はブレークポイントデバッグを行いながらcount(1)の増加を確認しプログラムによるカーソル増加を特定しました。 自分が動作させているプログラムと確定している場合はuser_nameを条件に設定します。 具体的なプログラム名を特定するにはsidから調査します。  select sid , user_name , count(1) from V$OPEN_CURSOR group by sid, user_name having count(1) &gt; 10 -- ここは最大数に応じて調整  ; さいごに  明示的にオープン、フェッチ、クローズをコードに記載すると通常処理はもちろんエラー処理での適切なクローズを求められます。 暗黙、明示どちらでもよいですが、FORループを利用してコードを記述したほうがバグのリスクを減らすことが出来るためオススメだと思っています。  </p></div>
+						<div class="post-summary"><p>Oracle ORA-01000 最大オープン・カーソル数を超えました。  Oracle(PLSQL)でカーソルに関するエラーが発生しハマったときの対処方法メモ 原因としてはカーソルを「オープン」と「クローズ」の数の不一致  私の場合は、オープンがループ内で行われており、クローズはループの外にあったためオープンし過ぎでエラーになりました。    調査方法 1.カーソルの最大数を確認します。  これが小さすぎるのが原因の場合はSet文でOracleの設定変更しましょう。  show parameters open_cursors; 2.カーソルの数を確認します。  私はブレークポイントデバッグを行いながらcount(1)の増加を確認しプログラムによるカーソル増加を特定しました。 自分が動作させているプログラムと確定している場合はuser_nameを条件に設定します。 具体的なプログラム名を特定するにはsidから調査します。  select sid , user_name , count(1) from V$OPEN_CURSOR group by sid, user_name having count(1) &gt; 10 -- ここは最大数に応じて調整  ; さいごに  明示的にオープン、フェッチ、クローズをコードに記載すると通常処理はもちろんエラー処理での適切なクローズを求められます。 暗黙、明示どちらでもよいですが、FORループを利用してコードを記述したほうがバグのリスクを減らすことが出来るためオススメだと思っています。  </p></div>
 						<div class="post-list-footer text-center">
 							<a href="https://icck.github.io/posts/0012-oracle-curerror/">Read More</a>
 						</div>
@@ -171,8 +171,7 @@ ga('create', 'UA-126514155-2', 'auto');
 							<h4 class="post-date">Sep 17, 2019</h4>
 						</div>
 						<div class="post-summary"><p>前回投稿した「Qiita API でいいねとVIEW数をCurlで取得する方法」を利用し、Lambdaで実行してs3にjsonファイルとして格納してみようと思います。
-Code 以下のコードを実行しs3に格納していきます。
-※事前にバケットは作成しておきます。
+Code 以下のコードを実行しs3に格納していきます。※事前にバケットは作成しておきます。
 import csv import json import logging import os import sys import boto3 import requests formatter = &#39;%(asctime)s%(name)-12s%(levelname)-8s%(message)s&#39; logging.basicConfig(level=logging.WARNING, format=formatter) logger = logging.getLogger(__name__) def get_next_url(response): link = response.headers[&#39;link&#39;] if link is None: return None links = link.split(&#39;,&#39;) for link in links: if &#39;rel=&#34;next&#34;&#39; in link: return link[link.find(&#39;&lt;&#39;) + 1:link.find(&#39;&gt;&#39;)] return None def get_items(token): url = &#39;https://qiita.com/api/v2/authenticated_user/items&#39; headers = {&#39;Authorization&#39;: &#39;Bearer {}&#39;.format(token)} items = [] while True: response = requests.</p></div>
 						<div class="post-list-footer text-center">
 							<a href="https://icck.github.io/posts/0010-qiita-python/">Read More</a>
@@ -206,8 +205,7 @@ QIITA_TOKEN=XXXXXXXXX # いいね、記事タイトル→CSV形式 curl -sH &#34
 							<h4 class="post-link"><a href="https://icck.github.io/posts/0008-fizzbuzz/">JavaでLambdaを利用してFizzBuzzしてみた</a></h4>
 							<h4 class="post-date">Sep 6, 2019</h4>
 						</div>
-						<div class="post-summary"><p> FizzBuzzとは  エンジニアがテストコードでよく書くネタ。Wiki参照
-https://ja.wikipedia.org/wiki/Fizz_Buzz  Javaなら1行でシンプルに書ける。そうLambdaならね import java.util.stream.IntStream; public class FizzBuzz { public static void main(String[] args) { IntStream.rangeClosed(1, 100).forEach( i -&gt; System.out.format(&#34;%s%s%n&#34;, (i%3 == 0 ? &#34;Fizz&#34; : &#34;&#34;), (i%5 == 0 ? &#34;Buzz&#34; : (i%3 == 0 ? &#34;&#34; : i)) ) ); } } </p></div>
+						<div class="post-summary"><p>FizzBuzzとは  エンジニアがテストコードでよく書くネタ。Wiki参照https://ja.wikipedia.org/wiki/Fizz_Buzz  Javaなら1行でシンプルに書ける。そうLambdaならね import java.util.stream.IntStream; public class FizzBuzz { public static void main(String[] args) { IntStream.rangeClosed(1, 100).forEach( i -&gt; System.out.format(&#34;%s%s%n&#34;, (i%3 == 0 ? &#34;Fizz&#34; : &#34;&#34;), (i%5 == 0 ? &#34;Buzz&#34; : (i%3 == 0 ? &#34;&#34; : i)) ) ); } } </p></div>
 						<div class="post-list-footer text-center">
 							<a href="https://icck.github.io/posts/0008-fizzbuzz/">Read More</a>
 						</div>
@@ -220,13 +218,7 @@ https://ja.wikipedia.org/wiki/Fizz_Buzz  Javaなら1行でシンプルに書け�
 							<h4 class="post-link"><a href="https://icck.github.io/posts/0007-codecommit/">AWS CodeCommitの作成、プルリクエストまでの方法</a></h4>
 							<h4 class="post-date">Sep 6, 2019</h4>
 						</div>
-						<div class="post-summary"><p>Codeシリーズはまずは使ってみる！ 
-AWSにはCodeXXXと名前がついているDeveloperツールがいくつかあります。
-それらは単体でも使えますが、組み合わせて利用することが多いです。
-↓
-難しく考えず手を動かすことで、手っ取り早く感覚を掴んでいくのが学習しやすいです
-本記事では、リポジトリの作成、コミット&amp;プッシュ、プルリクエストの3つを動かして行きます
-概要（最低限）  ソースコードを管理するGitリポジトリサービス サードパーティ(SourceTreeなど)利用可能 プルリクエスト機能が利用可能  リポジトリの作成  リポジトリ名を入れて、作成ボタン ＞ 完成！！ はじめにマネジメントコンソールでCodeCommitを選択しリポジトリを作成します。 名前を選択するだけ、簡単ですね。   次にgitを使う端末で設定をしていきます。 今回はAWS CLIを設定していることが前提になります。  git config --global credential.helper &#39;!aws --region ap-northeast-1 codecommit credential-helper $@&#39; git config --global credential.UseHttpPath true git clone [URLのクローン] コミット&amp;プッシュしてみる  通常のgitと同様の利用方法が使えることを確認します。  $ echo &#34;hello codecommit!&#34; &gt; README.md $ git add -A $ git commit -m &#34;add readme&#34; $ git push origin master  コミットされたことを確認しました。  プルリクエストしてみる  ブランチを作成しファイルを修正、コミット%プッシュします。  (master) $ git checkout -b f1 (f1) $ echo &#34;f1 add&#34; &gt;&gt; README.</p></div>
+						<div class="post-summary"><p>Codeシリーズはまずは使ってみる！ 概要（最低限）  ソースコードを管理するGitリポジトリサービス サードパーティ(SourceTreeなど)利用可能 プルリクエスト機能が利用可能  リポジトリの作成  リポジトリ名を入れて、作成ボタン ＞ 完成！！ はじめにマネジメントコンソールでCodeCommitを選択しリポジトリを作成します。 名前を選択するだけ、簡単ですね。   次にgitを使う端末で設定をしていきます。 今回はAWS CLIを設定していることが前提になります。  git config --global credential.helper &#39;!aws --region ap-northeast-1 codecommit credential-helper $@&#39; git config --global credential.UseHttpPath true git clone [URLのクローン] コミット&amp;プッシュしてみる  通常のgitと同様の利用方法が使えることを確認します。  $ echo &#34;hello codecommit!&#34; &gt; README.md $ git add -A $ git commit -m &#34;add readme&#34; $ git push origin master  コミットされたことを確認しました。  プルリクエストしてみる  ブランチを作成しファイルを修正、コミット%プッシュします。  (master) $ git checkout -b f1 (f1) $ echo &#34;f1 add&#34; &gt;&gt; README.</p></div>
 						<div class="post-list-footer text-center">
 							<a href="https://icck.github.io/posts/0007-codecommit/">Read More</a>
 						</div>
@@ -252,7 +244,7 @@ AWSにはCodeXXXと名前がついているDeveloperツールがいくつかあ�
 							<h4 class="post-link"><a href="https://icck.github.io/posts/0005-dynamodb-ttl/">Dynamodb TTL(Time to Live、データを自動削除する機能)を使ってみた</a></h4>
 							<h4 class="post-date">Sep 1, 2019</h4>
 						</div>
-						<div class="post-summary"><p>TTLとは  レコード毎にデータの有効期限を指定でき、その有効期限を過ぎるとデータが自動削除される機能です  利用例  低アクセスデータをアーカイブTBLへ移動  メインTBLと同定義、キャパシティーだけ下げてOLDデータを保存  低アクセスデータを削除  削除時にトリガーして、LOGを残す  トリガーさせるにはStreamの有効化が必要  TTL詳細  TTL の有効化  カラムで指定した有効期限を過ぎると、自動でデータが消える 変更が完全に処理されるまでに最大で 1 時間かかる  TTL 属性  項目の TTL タイムスタンプを保存する DynamoDB 属性の名前  有効期限はNumber型のエポック時間(Unixtime（ミリ秒無し）)を指定  現在の時間を、項目の Time To Live 属性に保存されている時間と比較 属性に保存されているエポック時間の値が現在の時間よりも少ない場合、項目は期限切れとマークされ、その後に削除される  データは48時間以内に削除される  リアルタイム性が重要でない場合（48時間後に消えてもOKな場合）は、とても有効な機能  スループットは消費せず、データ容量が減らせる  エポック時間形式(Unixtime)  コンピューターシステム上での時刻表現の一種 UNIXエポック、すなわち協定世界時 (UTC) での1970年1月1日午前0時0分0秒から形式的な経過秒数（すなわち、実質的な経過秒数から、その間に挿入された閏秒を引き、削除された閏秒を加えたもの） 現在時刻からエポック時間を取得する方法  Linux ターミナル: date +%s Python: import time; long(time.time()) Java: System.currentTimeMillis() / 1000L JavaScript: Math.</p></div>
+						<div class="post-summary"><p>TTLとは  レコード毎にデータの有効期限を指定でき、その有効期限を過ぎるとデータが自動削除される機能です  利用例  低アクセスデータをアーカイブTBLへ移動  メインTBLと同定義、キャパシティーだけ下げてOLDデータを保存   低アクセスデータを削除  削除時にトリガーして、LOGを残す   トリガーさせるにはStreamの有効化が必要  TTL詳細  TTL の有効化  カラムで指定した有効期限を過ぎると、自動でデータが消える 変更が完全に処理されるまでに最大で 1 時間かかる   TTL 属性  項目の TTL タイムスタンプを保存する DynamoDB 属性の名前   有効期限はNumber型のエポック時間(Unixtime（ミリ秒無し）)を指定  現在の時間を、項目の Time To Live 属性に保存されている時間と比較 属性に保存されているエポック時間の値が現在の時間よりも少ない場合、項目は期限切れとマークされ、その後に削除される   データは48時間以内に削除される  リアルタイム性が重要でない場合（48時間後に消えてもOKな場合）は、とても有効な機能   スループットは消費せず、データ容量が減らせる  エポック時間形式(Unixtime)  コンピューターシステム上での時刻表現の一種 UNIXエポック、すなわち協定世界時 (UTC) での1970年1月1日午前0時0分0秒から形式的な経過秒数（すなわち、実質的な経過秒数から、その間に挿入された閏秒を引き、削除された閏秒を加えたもの） 現在時刻からエポック時間を取得する方法  Linux ターミナル: date +%s Python: import time; long(time.</p></div>
 						<div class="post-list-footer text-center">
 							<a href="https://icck.github.io/posts/0005-dynamodb-ttl/">Read More</a>
 						</div>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on icck&#39;s Blog</title>
@@ -17,7 +17,7 @@
       <pubDate>Sun, 12 Apr 2020 01:15:02 +0900</pubDate>
       
       <guid>https://icck.github.io/posts/0013-gitsubmodule/</guid>
-      <description> Git Submodule化できないときの対処 キャッシュが残っている可能性  まずは、キャッシュのクリアを行います。  git rm –cached サブモジュールディレクトリ git submodule update --init --recursive サブモジュールの削除  既に存在しているサブモジュールがあったら削除してしまいます。 ディレクトリごと消すことがポイント  git submodule deinit -f サブモジュールディレクトリ git rm -f サブモジュールディレクトリ サブモジュールの追加  正しく追加できていれば2つのgitがソース管理プロバイダーに見えているはずです。  git submodule add git@github.com:&amp;lt;user&amp;gt;/&amp;lt;path&amp;gt;.git  </description>
+      <description>Git Submodule化できないときの対処 キャッシュが残っている可能性  まずは、キャッシュのクリアを行います。  git rm –cached サブモジュールディレクトリ git submodule update --init --recursive サブモジュールの削除  既に存在しているサブモジュールがあったら削除してしまいます。 ディレクトリごと消すことがポイント  git submodule deinit -f サブモジュールディレクトリ git rm -f サブモジュールディレクトリ サブモジュールの追加  正しく追加できていれば2つのgitがソース管理プロバイダーに見えているはずです。  git submodule add git@github.com:&amp;lt;user&amp;gt;/&amp;lt;path&amp;gt;.git  </description>
     </item>
     
   </channel>

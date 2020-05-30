@@ -6,7 +6,7 @@
 
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.71.1" />
 
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
@@ -106,35 +106,24 @@ ga('create', 'UA-126514155-2', 'auto');
             <h1><a href="https://icck.github.io/posts/0013-gitsubmodule/">Git Submodule化できないときの対処</a></h1>
             <span class="post-date">Apr 12, 2020 </span>
             <div class="post-content">
-                
-
-<h1 id="git-submodule化できないときの対処">Git Submodule化できないときの対処</h1>
-
+                <h1 id="git-submodule化できないときの対処">Git Submodule化できないときの対処</h1>
 <h2 id="キャッシュが残っている可能性">キャッシュが残っている可能性</h2>
-
 <ul>
 <li>まずは、キャッシュのクリアを行います。</li>
 </ul>
-
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rm –cached サブモジュールディレクトリ
 git submodule update --init --recursive</code></pre></div>
-
 <h2 id="サブモジュールの削除">サブモジュールの削除</h2>
-
 <ul>
 <li>既に存在しているサブモジュールがあったら削除してしまいます。</li>
 <li>ディレクトリごと消すことがポイント</li>
 </ul>
-
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git submodule deinit -f サブモジュールディレクトリ
 git rm -f サブモジュールディレクトリ</code></pre></div>
-
 <h2 id="サブモジュールの追加">サブモジュールの追加</h2>
-
 <ul>
 <li>正しく追加できていれば2つのgitがソース管理プロバイダーに見えているはずです。</li>
 </ul>
-
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git submodule add git@github.com:&lt;user&gt;/&lt;path&gt;.git </code></pre></div>
 
             </div>
